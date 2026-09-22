@@ -1,6 +1,6 @@
 ---
 title: "My First Report"
-author: "Your Name"
+author: "Nguyen Hoang Minh Vuong"
 format:
   html:
     embed-resources: true
@@ -41,3 +41,13 @@ hist(patients$age,
 
 When you are happy with the result, **commit and sync** your work (the Week 2
 course page walks you through this), then submit your repository link on Canvas.
+
+## My Notes 
+
+Task of *Assignment 1: Modern Workflow*
+
+- What I learned to day in class
+
+```{r}
+summary(patients)
+```
