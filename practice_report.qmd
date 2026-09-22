@@ -44,10 +44,30 @@ course page walks you through this), then submit your repository link on Canvas.
 
 ## My Notes 
 
-Task of *Assignment 1: Modern Workflow*
+# Task of *Assignment 1: Modern Workflow*
+What I learned to day in class:
+- How to create my repository using Fork
+- How to edit README and other files in Codespace
+- How to render the **Quarto** document to a specific type: html & pdf
+- I know how to commit changes, and push it to save to my repository
+- I know how to stop Codespace
 
-- What I learned to day in class
+# My Code
 
+A sample code sell run by professor 
 ```{r}
 summary(patients)
+```
+
+My simple R code
+```{r}
+# simple math
+7 + 7
+
+# print simple variable
+name <- "Vuong"
+age <- 18
+
+name 
+age
 ```
