@@ -15,6 +15,8 @@ library(tidyverse)  # AI-EDIT(2026-06-23): tidyverse-default — consolidated co
 
 ```{r}
 nhanes <- read_csv("examples/nhanes-equity/data/nhanes_equity_v6.csv", show_col_types = FALSE)
+
+nhanes #data is loaded, able to see first 10 lines
 ```
 
 ## Inspect
