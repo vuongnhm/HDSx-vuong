@@ -68,6 +68,6 @@ My simple R code
 name <- "Vuong"
 age <- 18
 
-name 
+name
 age
 ```
