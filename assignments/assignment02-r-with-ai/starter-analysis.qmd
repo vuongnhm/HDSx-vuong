@@ -28,19 +28,19 @@ colSums(is.na(nhanes))
 
 ## Summarize
 
-Replace this example with your own summary if you choose a different question.
+I want to summarize the `Age` variable by `IncomeGroup`, calculating the number of observations and the mean age for each income group.
 
 ```{r}
-bmi_summary <- nhanes |>
-  filter(!is.na(BMI), !is.na(IncomeGroup)) |>
+age_summary <- nhanes |>
+  filter(!is.na(Age), !is.na(IncomeGroup)) |>
   group_by(IncomeGroup) |>
   summarise(
     n = n(),
-    mean_bmi = mean(BMI),
+    mean_age = mean(Age, na.rm = TRUE),
     .groups = "drop"
   )
 
-bmi_summary
+age_summary
 ```
 
 ## Function
@@ -53,16 +53,16 @@ mean_with_n <- function(x) {
   )
 }
 
-mean_with_n(nhanes$BMI)
+mean_with_n(nhanes$Age)
 ```
 
 ## Save Output
 
 ```{r}
 dir.create("assignments/assignment02-r-with-ai/submission/output", recursive = TRUE, showWarnings = FALSE)
-write_csv(bmi_summary, "assignments/assignment02-r-with-ai/submission/output/summary_table.csv")
+write_csv(age_summary, "assignments/assignment02-r-with-ai/submission/output/summary_table.csv")
 ```
 
 ## AI Audit Note
 
-Add comments explaining which parts were drafted or debugged with AI and how you verified the result.
+None.
