@@ -1,0 +1,49 @@
+---
+title: "Assignment 4: Polyglot Analysis"
+author: "Nguyen Hoang Minh Vuong"
+format: html
+---
+
+## Load Data
+```{r}
+library(readr)
+library(dplyr)
+library(tidyverse)
+```
+
+```{r}
+# Update the path and filename, then uncomment to load your data.
+# data <- read.csv("data/your-file.csv")
+nhanes <- read_csv(
+  "examples/nhanes-equity/data/nhanes_equity_v6.csv",
+  show_col_types = FALSE
+)
+
+glimpse(nhanes)
+```
+
+## Data Cleaning
+```{r}
+r_summary <- nhanes |>
+  filter(!is.na(IncomeGroup), !is.na(Gender))
+r_summary
+```
+
+## Descriptive BMI Summary
+```{r}
+bmi_summary <- r_summary |>
+  group_by(IncomeGroup, Gender) |>
+  summarise(
+    n = sum(!is.na(BMI)),
+    n_missing_bmi = sum(is.na(BMI)),
+    mean_bmi = round(mean(BMI, na.rm = TRUE), 2),
+    sd_bmi = round(sd(BMI, na.rm = TRUE), 2),
+    median_bmi = round(median(BMI, na.rm = TRUE), 2),
+    iqr_bmi = round(IQR(BMI, na.rm = TRUE), 2),
+    .groups = "drop"
+  )
+
+bmi_summary
+```
+
+

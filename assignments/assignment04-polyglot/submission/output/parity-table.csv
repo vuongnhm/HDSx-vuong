@@ -1,0 +1,7 @@
+metric,r_value,python_value,match,notes
+raw_row_count,105626,105626,TRUE,
+raw_column_count,18,18,TRUE,
+filtered_row_count,96211,96211,TRUE,Excludes rows missing IncomeGroup or Gender.
+number_of_groups,6,6,TRUE,
+rounded_summary_values,6 groups x 6 summary columns,6 groups x 6 summary columns,TRUE,"Compares n, missing BMI, mean, SD, median, and IQR."
+grouping_labels,High Income (>3.5) / Female; High Income (>3.5) / Male; Low Income (<1.3) / Female; Low Income (<1.3) / Male; Middle Income / Female; Middle Income / Male,High Income (>3.5) / Female; High Income (>3.5) / Male; Low Income (<1.3) / Female; Low Income (<1.3) / Male; Middle Income / Female; Middle Income / Male,TRUE,"IncomeGroup / Gender labels, sorted alphabetically."
